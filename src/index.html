@@ -5,7 +5,8 @@
 </head>
 <body>
   <div class="container text justify-content-center">
-    <h1>Select a currency to exchange from!</h1>
+    <h1>Choose currency and amounts!</h1>
+    <label for="currencyFrom">Convert From</label>
     <select id="currencyFrom">
       <option value="USD">United States Dollar</option>
       <option value="AUD">Australian Dollar</option>
@@ -19,7 +20,7 @@
       <option value="RUB">Russian Ruble</option>
       <option value="SEK">Swedish Krona</option>
     </select>
-    <h1>Select a currency to exchange to!</h1>
+    <label for="currencyTo">Convert To</label>
     <select id="currencyTo">
       <option value="USD">United States Dollar</option>
       <option value="AUD">Australian Dollar</option>
@@ -33,7 +34,13 @@
       <option value="RUB">Russian Ruble</option>
       <option value="SEK">Swedish Krona</option>
     </select>
+    <label for="amount">Amount to Convert</label>
+    <input id="amount" type="number">
     <button class="btn btn-sm" id="convert">Convert</button>
+  </div>
+  <div class="container">
+    <div class="returnAmount"></div>
+    <div class="returnError"></div>
   </div>
 </body>
 </html>

@@ -11,16 +11,16 @@ import ExchangeService from './js/currency-exchanger-api';
 function getElements(response) {
   if(response) {
     let newAmount =  response.conversion_result;
-    console.log(newAmount);
+    $('.returnAmount').text(newAmount);
   } else {
-    console.log(response, "Error");
+    $('.returnError').text("There was an error finding that currency.");
   }
 
 }
 
 $(document).ready(function() {
   $('#convert').click(function() {
-    let amount = 1;
+    let amount = $('#amount').val();
     let currencyFrom = $('#currencyFrom option:selected').val();
     let currencyTo = $('#currencyTo option:selected').val();
     ExchangeService.getCurrency(currencyFrom, currencyTo, amount)
