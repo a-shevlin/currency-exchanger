@@ -14,7 +14,7 @@
 * _See **[package.json](/package.json)** for full list of dependencies._
 ## Description
 
-A user should be able to enter a USD amount and choose which currency to convert to. The currencies are fetched using [ExchangeRate-API](https://www.exchangerate-api.com/) and returned to the user on the webpage.
+A user should be able to enter a USD amount and choose which currency to convert to. The currencies are fetched using [ExchangeRate-API](https://www.exchangerate-api.com/) and returned to the user on the webpage. The conversion rate is then displayed with the most recent timestamp for when the API updated that currency.
 
 ## Setup/Installation Requirements
 
@@ -23,6 +23,7 @@ A user should be able to enter a USD amount and choose which currency to convert
 * _`$ npm install webpack-dev-server@3.8.0 --save-dev --save-exact`_
 * _`$ npm install bootstrap`_
 * _`$ npm audit fix --force`_
+* _create `.env` and add `API_KEY=yourAPIKey` for currency-exchanger-api._
 * _`$ npm run build`_
 * _`$ npm run start`_
 
