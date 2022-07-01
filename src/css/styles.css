@@ -1,13 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+html {
   font-family: 'Rubik', sans-serif;
+  background-color: rgb(181, 207, 188);
+}
+
+body {
+  background-color: rgb(181, 207, 188);
+}
+
+h1{
+  text-align: center;
+  font-weight: 700;
 }
 
 .rate {
   display: none;
+  margin: 0 auto;
+  width: 30vw;
 }
 
 #time {
   display: none;
 }
+
+#chartContainer {
+  height: 450px;
+  width: 100%;
+}
+
+.table {
+  margin: 0 auto;
+  width: 35vw;
+}
+
+tr {
+  border-bottom: rgb(77, 80, 78);
+}
+
+select {
+  background-color: rgb(211, 211, 211);
+
+}
+
