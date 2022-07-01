@@ -1,8 +1,8 @@
 //business logic
 
 export default class ExchangeService {
-  static getCurrency() {
-    let url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
+  static getCurrency(currency, amount) {
+    let url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${currency}/${amount}`;
     return fetch(url)
       .then(function(response) {
         if(!response.ok) {
