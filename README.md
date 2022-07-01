@@ -21,6 +21,7 @@ A user should be able to enter a USD amount and choose which currency to convert
 * _clone repo to pc_
 * _`$ npm install --save-dev`_
 * _`$ npm install webpack-dev-server@3.8.0 --save-dev --save-exact`_
+* _`$ npm install bootstrap`_
 * _`$ npm audit fix --force`_
 * _`$ npm run build`_
 * _`$ npm run start`_
