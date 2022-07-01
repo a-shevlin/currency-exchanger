@@ -11,7 +11,7 @@
 * _Javascript/Jquery_
 * _Markdown_
 * _Node.JS_
-* _See **package.json** for full list of dependencies._
+* _See **[package.json](/package.json)** for full list of dependencies._
 ## Description
 
 A user should be able to enter a USD amount and choose which currency to convert to. The currencies are fetched using [ExchangeRate-API](https://www.exchangerate-api.com/) and returned to the user on the webpage.
