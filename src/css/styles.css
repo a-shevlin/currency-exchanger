@@ -3,3 +3,11 @@
 *{
   font-family: 'Rubik', sans-serif;
 }
+
+.rate {
+  display: none;
+}
+
+#id {
+  display: none;
+}
