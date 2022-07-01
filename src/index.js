@@ -4,16 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeService from './js/currency-exchanger-api';
 
-// function clearFields() {
-
-// }
-
 function getElements(response) {
   if(response) {
     let newAmount =  response.conversion_result;
-    let excFromCurrency = response.base_code;
+    let excFromCurrency = $('#currencyFrom option:selected').text();
     let excToRate = response.conversion_rate;
-    let excToCurrency = response.target_code;
+    let excToCurrency = $('#currencyTo option:selected').text();
     let date = Date(response.time_last_update_unix * 1000);
     $('#amountTo').val(newAmount);
     $('#exchangeFromCurrency').text(excFromCurrency);
