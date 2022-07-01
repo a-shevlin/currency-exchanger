@@ -9,15 +9,23 @@ import ExchangeService from './js/currency-exchanger-api';
 // }
 
 function getElements(response) {
-  let newAmount =  response.conversion_result;
-  console.log(newAmount);
+  if(response) {
+    let newAmount =  response.conversion_result;
+    console.log(newAmount);
+  } else {
+    console.log(response, "Error");
+  }
+
 }
 
 $(document).ready(function() {
-  let amount = 1;
-  let currency = 'SEK';
-  ExchangeService.getCurrency(currency, amount)
-    .then(function(response) {
-      getElements(response);
-    });
+  $('#convert').click(function() {
+    let amount = 1;
+    let currencyFrom = $('#currencyFrom option:selected').val();
+    let currencyTo = $('#currencyTo option:selected').val();
+    ExchangeService.getCurrency(currencyFrom, currencyTo, amount)
+      .then(function(response) {
+        getElements(response);
+      });
+  });
 });
