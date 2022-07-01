@@ -11,7 +11,7 @@ import ExchangeService from './js/currency-exchanger-api';
 function getElements(response) {
   if(response) {
     let newAmount =  response.conversion_result;
-    $('.returnAmount').text(newAmount);
+    $('#amountTo').val(newAmount);
   } else {
     $('.returnError').text("There was an error finding that currency.");
   }
@@ -19,13 +19,18 @@ function getElements(response) {
 }
 
 $(document).ready(function() {
-  $('#convert').click(function() {
+  $('.currencyChange').change(function() {
+
     let amount = $('#amount').val();
     let currencyFrom = $('#currencyFrom option:selected').val();
     let currencyTo = $('#currencyTo option:selected').val();
-    ExchangeService.getCurrency(currencyFrom, currencyTo, amount)
+    if (amount > 0) {
+      ExchangeService.getCurrency(currencyFrom, currencyTo, amount)
       .then(function(response) {
         getElements(response);
       });
+    } else {
+      $('#amountTo').val('');
+    }
   });
 });
